@@ -3,6 +3,29 @@
 const ActiveDirectory = require('activedirectory');
 const dotenv = require('dotenv');
 dotenv.config();
+module.exports = {
+    url: process.env.NODE_AD_URL,
+    basedn: process.env.NODE_AD_DN,
+    username: process.env.NODE_AD_USER,
+    password: process.env.NODE_AD_PASS
+};
+/*
+Exemplo do Exports:
+//server2.js
+const { url } = require('./server');
+console.log(`Your url is ${url}`);
+
+Validar o Env:
+// config.js
+const dotenv = require('dotenv');
+const result = dotenv.config();
+if (result.error) {
+    throw result.error;
+}
+const { parsed: envs } = result;
+console.log(envs);
+module.exports = envs;
+*/
 
 //console.log(process.env.NODE_AD_URL);
 //console.log(process.env.NODE_AD_DN);
