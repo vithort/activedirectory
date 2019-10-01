@@ -17,6 +17,7 @@ var config = {
     //username: 'admglobal\\vtcarvalho',
     //password: '',
 }
+
 var ad = new ActiveDirectory(config);
 
 let username = process.env.NODE_AD_USER;
