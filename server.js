@@ -10,6 +10,13 @@ module.exports = {
     password: process.env.NODE_AD_PASS
 };
 /*
+Arquivo .ENV Exemplo:
+# .env
+NODE_AD_URL='ldap://X.X.X.X'
+NODE_AD_DN='dc=admglobal,dc=ad'
+NODE_AD_USER='admglobal\usuario'
+NODE_AD_PASS='senha'
+
 Exemplo do Exports:
 //server2.js
 const { url } = require('./server');
